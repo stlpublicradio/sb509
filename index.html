@@ -88,7 +88,7 @@ info.onAdd = function (map) {
 
 info.update = function (props) {
 	this._div.innerHTML = '<h4>SB 509 impact</h4>' +  (props ?
-		'<b>' + props.NAME + '</b><br />' + (props.sb509_new ? 'This district\'s initial appropriation was $' + formatter(props.sb509_old) + ' and SB 509\'s tax cut would cost it $' + formatter(props.sb509_old - props.sb509_new) + '.<br />That\'s ' + formatter(Math.abs((props.sb509_new - props.sb509_old) / props.sb509_old)*100) + '%' : '' )	: 'Hover over a district to see its old appropriation and its appropriation if SB 509 becomes law.');
+		'<b>' + props.sb509_dist + '</b><br />' + (props.sb509_new ? 'This district\'s initial appropriation was $' + formatter(props.sb509_old) + ' and SB 509\'s tax cut would cost it $' + formatter(props.sb509_old - props.sb509_new) + '.<br />That\'s ' + formatter(Math.abs((props.sb509_new - props.sb509_old) / props.sb509_old)*100) + '%' : '' )	: 'Hover over a district to see its old appropriation and its appropriation if SB 509 becomes law.');
 };
 
 info.addTo(map);
